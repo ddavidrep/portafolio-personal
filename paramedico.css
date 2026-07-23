@@ -1,0 +1,316 @@
+/*==============================
+            RESET
+==============================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#08111F;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/*==============================
+            HERO
+==============================*/
+
+.hero-paramedico{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background-image:url("bannerparamedico.webp");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(5,12,20,.55),
+        rgba(5,12,20,.75),
+        rgba(8,17,31,.95)
+    );
+
+}
+
+.contenido-hero{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    padding:20px;
+
+    animation:aparecer 1.2s ease;
+
+}
+
+/*==============================
+            ETIQUETA
+==============================*/
+
+.etiqueta{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    font-size:.9rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+    color:#E5E7EB;
+
+}
+
+/*==============================
+            TITULO
+==============================*/
+
+.contenido-hero h1{
+
+    font-size:5rem;
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    margin-bottom:25px;
+
+    text-shadow:0 10px 30px rgba(0,0,0,.45);
+
+}
+
+/*==============================
+            TEXTO
+==============================*/
+
+.contenido-hero p{
+
+    font-size:1.25rem;
+
+    color:#D6DCE5;
+
+    margin-bottom:45px;
+
+}
+
+/*==============================
+            BOTON
+==============================*/
+
+.btn-experiencia{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(135deg,#1565C0,#0D47A1);
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(13,71,161,.35);
+
+}
+
+.btn-experiencia:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 45px rgba(211,47,47,.35);
+
+    background:linear-gradient(135deg,#1976D2,#D32F2F);
+
+}
+
+.btn-experiencia i{
+
+    transition:.35s;
+
+}
+
+.btn-experiencia:hover i{
+
+    transform:translateX(6px);
+
+}
+
+/*==============================
+        BOTON VOLVER
+==============================*/
+
+.btn-volver{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:22px;
+
+    background:#1565C0;
+
+    transition:.35s;
+
+    z-index:999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.btn-volver:hover{
+
+    transform:translateY(-6px);
+
+    background:#D32F2F;
+
+}
+
+/*==============================
+        ANIMACION
+==============================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==============================
+        RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+    .hero-paramedico{
+
+    background-position:35% center;
+
+
+}
+
+    .contenido-hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .contenido-hero p{
+
+        font-size:1rem;
+
+    }
+
+    .btn-experiencia{
+
+        padding:16px 30px;
+
+        font-size:.95rem;
+
+    }
+
+    .btn-volver{
+
+        width:55px;
+
+        height:55px;
+
+    }
+
+}
